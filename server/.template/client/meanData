@@ -1,0 +1,7 @@
+/*MG*//*** Module*Name ***/
+var getAllModule*Name = function () { return $http.get(serverUrl + '/module*name' ); };
+var getModule*NameById = function (id) { return $http.get(serverUrl + '/module*name?id=' + id ); };
+var createModule*Name = function (module*name) { return $http.post(serverUrl + '/module*name', module*name ); };
+var updateModule*Name = function (module*name) { return $http.put(serverUrl + '/module*name' , module*name ); };
+var deleteModule*NameById = function (id) { return $http.delete(serverUrl + '/module*name?id=' + id ); };
+/*** /Module*Name ***/

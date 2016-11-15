@@ -1,0 +1,8 @@
+/*MG*//*** Module*Name ***/
+var module*nameCtrl = require("../controllers/module*name");
+router.get("/module*name", module*nameCtrl.findModule*Name);
+router.get("/module*name?", module*nameCtrl.findModule*NameById);
+router.put("/module*name", module*nameCtrl.updateModule*Name);
+router.post("/module*name", module*nameCtrl.createModule*Name);
+router.delete("/module*name?", module*nameCtrl.deleteModule*NameById);
+/*** /Module*Name ***/

@@ -1,0 +1,15 @@
+<div>
+	<div class="col-sm-3 list-group">
+		<a role="presentation" class="list-group-item"><p class="text-center">Admin Panel</p></a>
+		<a [routerLink]="['/admin', 'overviews']" class="list-group-item">Overviews</a>
+        <a [routerLink]="['/admin', 'users']" class="list-group-item">Users</a>
+        <a [routerLink]="['/admin', 'log']" class="list-group-item">Log</a>
+		<!--<a [routerLink]="['/admin', 'modules']" class="list-group-item">Modules</a>
+		<a [routerLink]="['/admin', 'mg']" class="list-group-item">MG</a>-->
+        <a [routerLink]="['/admin', 'settings']" class="list-group-item">Settings</a>
+	</div>
+
+	<div class="col-sm-9">
+		<router-outlet></router-outlet>
+	</div>	
+</div>

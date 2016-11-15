@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "ignore": ["public/*", "client/*", "README.md", "DB_Backup",
+  			     "test/*", "server/.template", "db/*"]
+}

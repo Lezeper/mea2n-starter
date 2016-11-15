@@ -1,0 +1,49 @@
+var mongoose = require('mongoose');
+var Module*Name = mongoose.model('Module*Name');
+
+module.exports.findModule*Name = function(req, res){
+	Module*Name.find({}, function(err, module*name){
+		if(err)
+			return res.status(500).send(err);
+		res.json(module*name);
+	});
+}
+
+module.exports.findModule*NameById = function(req, res){
+	Module*Name.find({_id: req.query.id}, function(err, module*name){
+		if(err)
+			return res.status(500).send(err);
+		res.json(module*name);
+	});
+}
+
+module.exports.createModule*Name = function(req, res){
+	var module*name = new Module*Name();
+
+	/*GCIT*/
+
+	module*name.save(function(err, module*name){
+		if(err)
+			return res.status(500).send(err);
+		res.status(200).json({message: "Module*Name Created!", id: module*name._id});
+	});
+}
+
+module.exports.updateModule*Name = function(req, res){
+	Module*Name.findOneAndUpdate({_id: req.body._id}, req.body, 
+												function(err, module*name){
+		if(err)
+			return res.status(500).send(err);
+		if(Module*Name == null)
+			return res.status(200).json({"message": "Module*Name not found."});
+		res.status(200).json({"message": "Module*Name updated!"});
+	});
+}
+
+module.exports.deleteModule*NameById = function(req, res){
+	Module*Name.findByIdAndRemove(req.query.id, function(err){
+		if(err)
+			return res.status(500).send(err);
+		res.json({"message": "Successful delete Module*Name."});
+	});
+}

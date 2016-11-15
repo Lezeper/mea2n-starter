@@ -1,0 +1,6 @@
+var mongoose = require('mongoose');
+var module*nameSchema = new mongoose.Schema({
+	/*MG*/
+});
+
+mongoose.model('Module*Name', module*nameSchema);

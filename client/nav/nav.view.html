@@ -1,0 +1,23 @@
+<h3 class="text-center">MEA2N Starter</h3>
+<header>
+	<nav>
+		<div style="float: right">
+			<a href="/login" *ngIf="!isLoggedIn"><i class="fa fa-user" aria-hidden="true"></i></a>
+			<div *ngIf="isLoggedIn">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<label style="margin-right: 5px">{{currentUser.name}}</label>
+				<a href="" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div>
+			<ul class="nav nav-tabs">
+				<li routerLinkActive="active">
+					<a routerLink='/home'>Home</a>
+				</li>
+				<li routerLinkActive="active">
+					<a [routerLink]="['/admin']">Admin</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,22 @@
+<h2 class="text-center">Users Lists</h2>
+<table class="table table-striped well">
+	<thead>
+		<tr>
+			<th>Email</th>
+			<th>Name</th>
+			<th>Role</th>
+			<th>Date</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<td>{{user.email}}</td>
+			<td>{{user.name}}</td>
+			<td>{{user.role}}</td>
+			<td>{{user.created | date:'MM/dd/yyyy'}}</td>
+			<td><i style="cursor: pointer;" class="fa fa-times" aria-hidden="true" 
+                    (click)="deleteUser(user._id)"></i></td>
+		</tr>
+	</tbody>
+</table>

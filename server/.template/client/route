@@ -1,0 +1,1 @@
+.state('model*name', { url: 'FERURL', templateUrl: "/admin/log/log.view.html", controller: "logCtrl" })

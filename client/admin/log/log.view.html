@@ -1,0 +1,27 @@
+<div>
+	<h2 class="text-center">Logs</h2>
+
+	<div class="form-group">
+		<button class="btn btn-primary" (click)="deleteAllLogs()">Clear All Logs</button>
+	</div>
+	<div class="form-group">
+		<table class="table table-striped well">
+			<thead>
+				<tr>
+					<th>IP</th>
+					<th>Method</th>
+					<th>Target</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let log of logs">
+					<td>{{log.ip}}</td>
+					<td>{{log.method}}</td>
+					<td>{{log.target}}</td>
+					<td>{{log.created | date: "M/d/yy h:mm a"}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
