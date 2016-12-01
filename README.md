@@ -2,6 +2,10 @@
 
 ### Introduction
                 This is personal project starter for MEA2N Stack.
+### Usage
+                > npm install
+                > nodemon
+                > npm run build
 ### Dependencies
                 Mongo DB
                 Express
@@ -11,6 +15,7 @@
                 Passport
                 Handlebars
                 WebPack 2
+                Nodemon
 ### DB Model
 ##### Settings
                 version: String, required

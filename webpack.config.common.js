@@ -12,6 +12,10 @@ module.exports = {
         extensions: ['.js', '.ts']
     },
 
+    resolveLoader: {
+        moduleExtensions: ['-loader']
+    },
+
     module: {
         loaders: [
             {
